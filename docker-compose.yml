@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  nzbdav:
+    image: ghcr.io/nzbdav-dev/nzbdav:latest
+    container_name: nzbdav
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+    volumes:
+      - /mnt/root/nzbdav/config:/config
+      - /mnt/root/nzbdav/downloads:/downloads
+    ports:
+        - 8081:3000  # Frontend
+        - 8082:8080  # für Backend/Health
+    restart: unless-stopped
