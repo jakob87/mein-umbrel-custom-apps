@@ -2,3 +2,8 @@ id: "meinstore-nzbdav" # Choose the ID for your app store. This should contain o
 name: "NZBdav" # Choose the name of your app store. It will show up in the UI as "<name> App Store".
 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nzbdav.png  # Optional, z. B. von Docker Hub
 description: Mein NZBdav via Portainer
+
+id: meinestore
+name: Meine Custom Apps
+apps:
+  - Nzbdav
